@@ -1,0 +1,290 @@
+# .gitignore for AI-Powered Recruitment SaaS Database Project
+
+# ===========================================
+# Environment and Configuration Files
+# ===========================================
+
+# Environment variables (contains sensitive data)
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+.env.*.local
+
+# Database connection files
+database.yml
+db_config.json
+connection_strings.txt
+
+# ===========================================
+# Deployment and Infrastructure
+# ===========================================
+
+# Deployment artifacts
+deployment/
+dist/
+build/
+
+# Infrastructure as Code
+terraform.tfstate
+terraform.tfstate.backup
+*.tfplan
+.terraform/
+
+# Kubernetes secrets
+k8s-secrets/
+*.secret.yaml
+
+# Docker development
+docker-compose.override.yml
+.dockerignore
+
+# ===========================================
+# Database Files and Backups
+# ===========================================
+
+# Database dumps
+*.sql.gz
+*.dump
+*.backup
+backup_*.sql
+dumps/
+backups/
+
+# Database logs
+*.log
+logs/
+postgresql.log
+pg_log/
+
+# Database data files (if using local development)
+postgres_data/
+pgdata/
+data/
+
+# Migration rollback files
+rollback_*.sql
+migration_backup_*.sql
+
+# ===========================================
+# IDE and Editor Files
+# ===========================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ===========================================
+# Operating System Files
+# ===========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.TemporaryItems
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ===========================================
+# Security and Secrets
+# ===========================================
+
+# API keys and secrets
+api_keys.txt
+secrets.json
+credentials.json
+service_account_key.json
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.cert
+ssl/
+certificates/
+
+# SSH keys
+*.ppk
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# ===========================================
+# Development and Testing
+# ===========================================
+
+# Test databases
+test_*.sql
+*_test.sql
+test_results/
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Cache files
+.cache/
+*.cache
+
+# Node.js (if using Node tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if using Python tools)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv/
+
+# ===========================================
+# Application Specific
+# ===========================================
+
+# CV upload directories (sensitive candidate data)
+uploads/
+cv_files/
+candidate_cvs/
+attachments/
+
+# AI processing cache
+ai_cache/
+ml_models/
+processing_temp/
+
+# Generated documentation
+docs/_build/
+docs/generated/
+
+# Performance monitoring
+monitoring/
+metrics/
+performance_logs/
+
+# ===========================================
+# Compressed Files and Archives
+# ===========================================
+
+# Archives
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# ===========================================
+# Misc Development Files
+# ===========================================
+
+# Patch files
+*.orig
+*.rej
+*.patch
+
+# Editor backup files
+*.bak
+*.swp
+*.save
+
+# Development notes
+TODO.txt
+NOTES.md
+SCRATCH.md
+development_notes/
+
+# ===========================================
+# CI/CD and Automation
+# ===========================================
+
+# GitHub Actions artifacts
+.github/workflows/*.log
+
+# Jenkins
+.jenkins/
+
+# CircleCI
+.circleci/config.local.yml
+
+# ===========================================
+# Keep These Important Files
+# ===========================================
+
+# Force include important configuration templates
+!.env.example
+!.env.template
+!database.yml.example
+
+# Keep documentation
+!docs/
+!README.md
+!*.md
+
+# Keep migration files (essential for deployment)
+!migrations/
+!migrations/*.sql
+
+# Keep seed files for development
+!seed/
+!seed/*.sql
+
+# Keep scripts
+!scripts/
+!scripts/*.sh
+!scripts/*.sql
